@@ -127,11 +127,11 @@ void loopMainLogic() {
 void handleMainMenuInput(char keyPressed) {
   switch (keyPressed) {
     case 'A': // Strzałka w górę
-      cursorY = (cursorY - 1 + maxApps) % maxApps;
+      cursorY = (cursorY - 1 + (maxApps / maxAppsPerRow)) % (maxApps / maxAppsPerRow);
       redrawMainMenu();
       break;
     case 'B': // Strzałka w dół
-      cursorY = (cursorY + 1) % maxApps;
+      cursorY = (cursorY + 1) % (maxApps / maxAppsPerRow);
       redrawMainMenu();
       break;
     case 'D': // Strzałka w prawo
@@ -189,12 +189,16 @@ void redrawMainMenu() {
     }
     drawText(x + 10, y + 8, String("App ") + (i + 1), ILI9341_WHITE, 2);
   }
-  if (cursorY == maxApps / maxAppsPerRow) {
-    drawFrame(10, 130, 100, 30, ILI9341_BLUE);
-  } else {
-    drawFrame(10, 130, 100, 30, ILI9341_WHITE);
+
+  // Rysuj ramkę Ustawienia tylko gdy kursor jest na ostatnim rzędzie
+  if (cursorY == (maxApps - 1) / maxAppsPerRow) { 
+    if (cursorX == 0) {
+      drawFrame(10, 130, 100, 30, ILI9341_BLUE);
+    } else {
+      drawFrame(10, 130, 100, 30, ILI9341_WHITE);
+    }
+    drawText(20, 138, "Ustawienia", ILI9341_WHITE, 2);
   }
-  drawText(20, 138, "Ustawienia", ILI9341_WHITE, 2);
 }
 
 void redrawSettingsMenu() {
