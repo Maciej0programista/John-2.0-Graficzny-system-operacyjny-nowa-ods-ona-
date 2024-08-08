@@ -1,5 +1,5 @@
 # John 2.0: Konsolowy system operacyjny na Arduino Mega z graficznym interfejsem
-
+# Jerzeli spodovał ci się projekt lub go urzywarz proszę podziel się swoimi wrarzeniami i napisz domnie na adres:bosyjjakub@gmail.com
 Witaj w **John 2.0**, ewolucji konsolowego systemu operacyjnego dla **Arduino Mega**! John 2.0 wprowadza graficzny interfejs użytkownika, zachowując jednocześnie swoje konsolowe korzenie.  Zapomnij o numerowaniu aplikacji – teraz nawigujesz strzałkami i wybierasz to, co chcesz uruchomić, za pomocą wyraźnej, niebieskiej ramki!
 
 ## :sparkles: Funkcjonalność:
