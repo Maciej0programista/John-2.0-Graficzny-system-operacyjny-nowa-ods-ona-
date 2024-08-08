@@ -2,7 +2,7 @@
 
 Witaj w **John 2.0**, ewolucji konsolowego systemu operacyjnego dla **Arduino Mega**! John 2.0 wprowadza graficzny interfejs użytkownika, zachowując jednocześnie swoje konsolowe korzenie.  Zapomnij o numerowaniu aplikacji – teraz nawigujesz strzałkami i wybierasz to, co chcesz uruchomić, za pomocą wyraźnej, niebieskiej ramki!
 
-## :sparkles:  Funkcjonalność:
+## :sparkles: Funkcjonalność:
 
 * **Intuicyjny interfejs graficzny:**  
     * Wyświetla menu aplikacji z czytelnymi nazwami.
@@ -11,8 +11,8 @@ Witaj w **John 2.0**, ewolucji konsolowego systemu operacyjnego dla **Arduino Me
 * **Uruchamianie aplikacji:**  Naciśnij klawisz `#`, aby uruchomić zaznaczoną aplikację.
 * **Szybki powrót:** Naciśnij jednocześnie `#` i `*`, aby wrócić do menu głównego z dowolnego miejsca.
 * **Wygodne przewijanie:**  Przeglądaj długie listy za pomocą przycisku `*`:
-    * :point_down:  Pojedyncze kliknięcie: Przewiń w dół o 2 linie.
-    * :arrow_up: Przytrzymanie: Przewiń w górę o 1 linię na sekundę.
+    * :point_down:  Pojedyncze kliknięcie: Przewiń w dół.
+    * :arrow_up: Przytrzymanie: Przewiń w górę.
 * **Włączanie/wyłączanie:** 
     * :arrow_right: Przytrzymaj przycisk `#` przez 5 sekund, aby włączyć urządzenie.
     * :arrow_left: Przytrzymanie `#` podczas wyłączonego urządzenia go włączy.
@@ -69,13 +69,11 @@ Witaj w **John 2.0**, ewolucji konsolowego systemu operacyjnego dla **Arduino Me
         * `getKey()`:  Odczytuje wciśnięty klawisz na klawiaturze.
         * `readFile(nazwa_pliku)`:  Odczytuje zawartość pliku z karty SD.
         * `writeFile(nazwa_pliku, dane)`: Zapisuje dane do pliku na karcie SD.
-        * **I wiele więcej!**  Dokumentacja funkcji specyficznych dla Johna 2.0 zostanie udostępniona wkrótce.
 5. **Uruchom John 2.0:**  Po włączeniu urządzenia, John 2.0 automatycznie skompiluje wszystkie aplikacje Lua z folderu `/app` i wyświetli je w menu głównym.
 
-## :information_source: Dodatkowe informacje:
+## :blue_book: Przykładowe aplikacje Lua:
 
-* John 2.0 został zaprojektowany tak, aby był łatwy w użyciu i rozszerzalny.
-* Możesz tworzyć własne aplikacje Lua, aby dodawać nowe funkcje i dostosowywać system do swoich potrzeb.
-* Kod źródłowy Johna 2.0 jest otwarty, więc możesz go modyfikować i ulepszać.
+**1. Hello World (app1/main.lua):**
 
-**Mamy nadzieję, że spodoba Ci się korzystanie z Johna 2.0!**
+```lua
+print("Witaj w świecie Johna 2.0!")
