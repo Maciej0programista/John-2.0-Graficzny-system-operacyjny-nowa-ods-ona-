@@ -5,12 +5,16 @@
 #include <SPI.h>
 #include <SD.h>
 #include "Lua_compiler.h"
+#include "command_lua.h"
 
 lua_State *L;
 
 void setupLua() {
   L = luaL_newstate();
   luaL_openlibs(L);
+
+  // Rejestracja dodatkowych funkcji Lua
+  registerLuaCommands(L);
 
   // Inicjalizacja karty SD
   if (!SD.begin(53)) {
